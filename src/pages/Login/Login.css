@@ -70,3 +70,15 @@
     width: 18px;
     height: 18px;
 }
+
+.form__switch {
+    margin-top: 40px;
+    color:  #737373;
+}
+
+.form__switch span {
+    margin-left: 6px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
