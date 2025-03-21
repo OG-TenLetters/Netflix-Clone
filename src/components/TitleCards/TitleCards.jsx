@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import "./TitleCards.css"
 import cards__data from '../../assets/cards/Cards_data'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const TitleCards = ({title, category}) => {
+const TitleCards = ({title, category, catpage}) => {
 
   const [apiData, setApiData] = useState([])
 
@@ -28,15 +29,10 @@ const TitleCards = ({title, category}) => {
   
   useEffect(() => {
 
-  //   fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
-  // .then(res => res.json())
-  // .then(res => console.log(res))
-  // .catch(err => console.error(err)); //The Recommended way which made the whole screen turn black and console errors of .map not defined
-    
     async function fetchMovies() { //an attempt to make it work
-      const { data } = await axios.get('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+      const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=${catpage?catpage:"1"}`, options)
       console.log(data.results)
-      const apiRes = data.results
+      setApiData(data.results)
     }
   fetchMovies(),
   cardsRef.current.addEventListener('wheel', handleWheel)
@@ -47,10 +43,10 @@ const TitleCards = ({title, category}) => {
       <div className="card__list" ref={cardsRef}>
         {apiData.map((card, index) => { //Issues as soon as I switch from cards__data to apiData
           return (
-            <div className="card" key={index}>
+            <Link className="card" key={index}>
               <img src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path} alt="" />
               <p>{card.original_title}</p>
-            </div>
+            </Link>
           )
         })}
       </div>
