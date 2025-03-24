@@ -12,6 +12,7 @@
     transparent
   );
   z-index: 1;
+  transition: background 225ms ease;
 }
 .navbar__left {
     display: flex;
@@ -69,3 +70,6 @@
     display: block;
 }
 
+.nav-dark {
+    background: #141414;
+}
