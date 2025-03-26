@@ -31,7 +31,7 @@ const TitleCards = ({title, category, catpage}) => {
 
     async function fetchMovies() { //an attempt to make it work
       const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${category?category:"now_playing"}?language=en-US&page=${catpage?catpage:"1"}`, options)
-      console.log(data.results)
+      // console.log(data.results)
       setApiData(data.results)
     }
   fetchMovies(),
