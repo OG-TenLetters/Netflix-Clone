@@ -27,12 +27,12 @@ const Navbar = () => {
         <div className="navbar__left">
             <img src={Logo} alt="" />
             <ul>
-              <li>Home</li>
-              <li>Tv Shows</li>
-              <li>Movies</li>
-              <li>New & Popular</li>
-              <li>My List</li>
-              <li>Browse by Languages</li>
+              <li className='nope'>Home</li>
+              <li className='nope'>Tv Shows</li>
+              <li className='nope'>Movies</li>
+              <li className='nope'>New & Popular</li>
+              <li className='nope'>My List</li>
+              <li className='nope'>Browse by Languages</li>
             </ul>
         </div>
         <div className="navbar__right">

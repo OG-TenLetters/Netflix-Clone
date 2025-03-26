@@ -1,3 +1,5 @@
+
+
 .navbar {
   width: 100%;
   padding: 20px 6%;
@@ -27,9 +29,9 @@
     list-style: none;
     gap: 20px;
 }
-.navbar__left ul li {
+/* .navbar__left ul li {
     cursor: pointer;
-}
+} */
 .navbar__right {
     display: flex;
     gap: 20px;

@@ -12,3 +12,6 @@ body {
   font-family: 'poppins';
 }
 
+.nope {
+  cursor: not-allowed;
+}
