@@ -15,3 +15,7 @@ body {
 .nope {
   cursor: not-allowed;
 }
+
+.clickable {
+  cursor: pointer;
+}

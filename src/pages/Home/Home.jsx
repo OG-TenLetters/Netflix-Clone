@@ -22,11 +22,11 @@ const Home = () => {
             enemy
           </p>
           <div className="hero__btns">
-            <button className="btn">
+            <button className="btn nope">
               <img src={play_icon}/>
               Play
             </button>
-            <button className="btn dark__btn">
+            <button className="btn dark__btn nope">
               <img src={info_icon}/>
               More Info
             </button>

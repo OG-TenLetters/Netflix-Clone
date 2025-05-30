@@ -36,9 +36,9 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar__right">
-          <img src={search_icon} className='icons' alt="" />
+          <img src={search_icon} className='icons nope' alt="" />
           <p>Children</p>
-          <img src={bell_icon} className='icons' alt="" />
+          <img src={bell_icon} className='icons nope' alt="" />
           <div className="navbar__profile">
           <img src={profile_img} className='profile' alt="" />
           <img src={caret_icon} className='' alt="" />
