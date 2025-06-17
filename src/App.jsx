@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Disclaimer from "./pages/Disclaimer/Disclaimer.jsx";
 
 const App = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const App = () => {
         navigate("/");
       } else {
         console.log("Logged Out");
-        navigate("/login");
+        navigate("/disclaimer");
       }
     });
   }, []);
@@ -28,6 +29,7 @@ const App = () => {
       <ToastContainer theme="dark" />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/login" element={<Login />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>
