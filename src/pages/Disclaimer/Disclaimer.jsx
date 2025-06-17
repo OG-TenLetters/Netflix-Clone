@@ -18,7 +18,7 @@ const Disclaimer = () => {
             Email: admin@gmail.com <br />
             Password: password <br />
             <br />
-            *** This parody site has no affiliation with Netflix or any of it's
+            *** This parody site has no affiliation with Netflix or any of its
             parties. Please practice safety when viewing unknown websites ***
             <br />
             That's about it.
